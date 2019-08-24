@@ -1,0 +1,8 @@
+# App configuration
+app:
+  site:
+    host: onetimesecret.aws.binbash.com.ar
+    domain: onetimesecret.aws.binbash.com.ar
+    ssl: false
+  colonels:
+    - info@binbash.com.ar
