@@ -30,7 +30,7 @@ release-patch: ## releasing patch (eg: 0.0.1 -> 0.0.2) based on semantic tagging
 	${GIT_SEMTAG_CMD_PREFIX} final -s patch
 
 release-patch-with-changelog: ## make changelog-patch && git add && git commit && make release-patch
-	@if [ ! -d ./.chglog ]; then\
+	@if [ git status |grep 'nothing to commit, working directory clean' ]; then\
 		make changelog-patch;\
 		git status;\
 		git add CHANGELOG.md;\
@@ -38,11 +38,11 @@ release-patch-with-changelog: ## make changelog-patch && git add && git commit &
 		git push origin master;\
 		make release-patch;\
 	else\
-		echo "=================================================";\
-    	echo "Changes in working directory pending to be pushed";\
-    	echo "=================================================";\
+		echo "===============================================================================================";\
+    	echo "Changes in working directory pending to be pushed - please check 'git status' cmd output below ";\
+		echo "===============================================================================================";\
     	echo "$$(git status)";\
-    	echo "=================================================";\
+		echo "===============================================================================================";\
 	fi
 
 release-minor: ## releasing minor (eg: 0.0.2 -> 0.1.0) based on semantic tagging script for Git
