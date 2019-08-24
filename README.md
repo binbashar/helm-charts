@@ -70,3 +70,20 @@ helm plugin install https://github.com/databus23/helm-diff --version master
   - You could take an existing chart that you modify to your needs
 - Use helm to tune your chart as you like
 - Once you are done you can move on to add your chart to any of the environments in this repository
+
+
+# Release Management
+
+## Docker based makefile commands
+- https://cloud.docker.com/u/binbash/repository/docker/binbash/git-release
+- https://github.com/binbashar/helm-charts/blob/master/Makefile
+
+Root directory `Makefile` has the automated steps (to be integrated with CircleCI jobs)
+
+```
+$ make
+Available Commands:
+ - release-major-with-changelog make changelog-major && git add && git commit && make release-major
+ - release-minor-with-changelog make changelog-minor && git add && git commit && make release-minor
+ - release-patch-with-changelog make changelog-patch && git add && git commit && make release-patch
+ ```
