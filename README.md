@@ -1,5 +1,3 @@
-# Helm Charts
-
 <div align="center">
     <img src="https://raw.githubusercontent.com/binbashar/helm-charts/master/figures/binbash.png" alt="drawing" width="350"/>
 </div>
