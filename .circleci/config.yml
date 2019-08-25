@@ -35,10 +35,6 @@ jobs:
               echo "==============================================================================================="
             fi
 
-      - run:
-          name: make changelog-patch && git add && git commit && make release-patch
-          command: make release-patch-with-changelog
-
 workflows:
   version: 2
   changelog_and_release:
