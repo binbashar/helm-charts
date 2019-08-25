@@ -22,6 +22,8 @@ jobs:
 
       - run: ls -ltra
 
+      - run: git branch
+
       - run:
           name: release-patch-with-changelog-circleci
           command: |
