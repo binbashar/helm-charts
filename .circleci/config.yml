@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
 
-      - run: apt-get update
+      - run: sudo apt-get update
 
       - run:
           name: git-chglog generation for path release
