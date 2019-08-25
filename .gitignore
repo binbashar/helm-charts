@@ -2,6 +2,7 @@
 ################
 .*
 !*.env.example
+!*.circleci
 !*.dockeringnore
 !*.hosts
 !/.gitignore
