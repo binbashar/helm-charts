@@ -2,21 +2,6 @@
 ## [Unreleased]
 
 
-<<<<<<< HEAD
-<a name="v0.0.16"></a>
-## [v0.0.16] - 2019-08-25
-
-<a name="v0.0.15"></a>
-## [v0.0.15] - 2019-08-25
-
-<a name="v0.0.14"></a>
-## [v0.0.14] - 2019-08-25
-
-<a name="v0.0.13"></a>
-## [v0.0.13] - 2019-08-25
-
-=======
->>>>>>> 370db49b3a721d23079a19e8122d2ec23b7cb4c3
 <a name="v0.0.12"></a>
 ## [v0.0.12] - 2019-08-25
 ### Pull Requests
@@ -62,15 +47,7 @@
 <a name="v0.0.1"></a>
 ## v0.0.1 - 2019-08-24
 
-<<<<<<< HEAD
-[Unreleased]: https://github.com/binbashar/helm-charts/compare/v0.0.16...HEAD
-[v0.0.16]: https://github.com/binbashar/helm-charts/compare/v0.0.15...v0.0.16
-[v0.0.15]: https://github.com/binbashar/helm-charts/compare/v0.0.14...v0.0.15
-[v0.0.14]: https://github.com/binbashar/helm-charts/compare/v0.0.13...v0.0.14
-[v0.0.13]: https://github.com/binbashar/helm-charts/compare/v0.0.12...v0.0.13
-=======
 [Unreleased]: https://github.com/binbashar/helm-charts/compare/v0.0.12...HEAD
->>>>>>> 370db49b3a721d23079a19e8122d2ec23b7cb4c3
 [v0.0.12]: https://github.com/binbashar/helm-charts/compare/v0.0.11...v0.0.12
 [v0.0.11]: https://github.com/binbashar/helm-charts/compare/v0.0.10...v0.0.11
 [v0.0.10]: https://github.com/binbashar/helm-charts/compare/v0.0.9...v0.0.10
