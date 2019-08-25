@@ -11,7 +11,7 @@ jobs:
 
       - add_ssh_keys:
           fingerprints:
-            - "2d:9c:2e:a5:a4:77:0b:a7:91:2c:f1:14:1c:3a:65:e1"
+            - "f5:ca:b0:c5:06:26:aa:ec:c8:a7:75:57:f0:e7:c2:f3"
 
       - run: pwd
 
