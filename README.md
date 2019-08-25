@@ -80,6 +80,10 @@ helm plugin install https://github.com/databus23/helm-diff --version master
 
 Root directory `Makefile` has the automated steps (to be integrated with **CircleCI jobs** []() )
 
+### CircleCi PR auto-release job
+- https://circleci.com/gh/binbashar/helm-charts
+
+### Manual execution from workstation
 ```
 $ make
 Available Commands:

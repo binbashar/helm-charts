@@ -14,8 +14,8 @@ jobs:
       - run: ls -ltra
 
       - run:
-          name: make changelog-minor && git add && git commit && make release-minor
-          command: make release-minor-with-changelog
+          name: make changelog-patch && git add && git commit && make release-patch
+          command: make release-patch-with-changelog
 
 workflows:
   version: 2
