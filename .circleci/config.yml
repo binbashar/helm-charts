@@ -14,8 +14,8 @@ jobs:
       - run: ls -ltra
 
       - run:
-          name: git-chglog generation for path release
-          command: make changelog-patch
+          name: make changelog-minor && git add && git commit && make release-minor
+          command: make release-minor-with-changelog
 
 workflows:
   version: 2
