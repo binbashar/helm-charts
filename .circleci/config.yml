@@ -13,7 +13,7 @@ jobs:
 
       - run: ls -ltra
 
-      - run: git status
+      - run: git status | grep 'nothing to commit, working tree clean'
 
       - run:
           name: make changelog-patch && git add && git commit && make release-patch
