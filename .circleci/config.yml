@@ -17,9 +17,16 @@ jobs:
           name: if test
           command: |
             if git status | grep 'nothing to commit, working tree clean'; then
-              echo 'OK'
+              echo "==============================================================================================="
+              echo "release-patch-with-changelog-circleci"
+              echo "==============================================================================================="
+              make release-patch-with-changelog-circleci
             else
-              echo 'FAILED'
+              echo "==============================================================================================="
+              echo "Changes in working directory pending to be pushed - please check 'git status' cmd output below "
+              echo "==============================================================================================="
+              echo "$(git status)"
+              echo "==============================================================================================="
             fi
 
       - run:
