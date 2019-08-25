@@ -7,7 +7,7 @@
 
 # helm-charts
 
-![GitHub CircleCI](https://circleci.com/gh/binbashar/helm-charts/tree/master.svg?style=svg)
+[![CircleCI](https://circleci.com/gh/binbashar/helm-charts.svg?style=svg)](https://circleci.com/gh/binbashar/helm-charts)
 
 ![GitHub](https://img.shields.io/github/license/binbashar/helm-charts.svg)
 ![GitHub language count](https://img.shields.io/github/languages/count/binbashar/helm-charts.svg)
