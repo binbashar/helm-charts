@@ -2,7 +2,6 @@ version: 2
 
 jobs:
   chagelog-patch:
-    working_directory: ~/tmp
     machine:
       image: ubuntu-1604:201903-01
       docker_layer_caching: true
@@ -10,7 +9,9 @@ jobs:
     steps:
       - checkout
 
-      - run: sudo apt-get update
+      - run: pwd
+
+      - run: ls -ltra
 
       - run:
           name: git-chglog generation for path release
