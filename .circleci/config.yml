@@ -24,6 +24,8 @@ jobs:
               echo "==============================================================================================="
               echo "release-patch-with-changelog-circleci"
               echo "==============================================================================================="
+              git config --global user.email "info@binbash.com.ar"
+              git config --global user.name "binbashdevops"
               make release-patch-with-changelog-circleci
             else
               echo "==============================================================================================="
