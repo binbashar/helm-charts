@@ -2,6 +2,12 @@
 ## [Unreleased]
 
 
+<a name="v0.0.12"></a>
+## [v0.0.12] - 2019-08-25
+### Pull Requests
+- Merge pull request [#5](https://github.com/binbashar/helm-charts/issues/5) from binbashar/BBL-100-circile-ci-auto-release
+
+
 <a name="v0.0.11"></a>
 ## [v0.0.11] - 2019-08-25
 ### Pull Requests
@@ -41,7 +47,8 @@
 <a name="v0.0.1"></a>
 ## v0.0.1 - 2019-08-24
 
-[Unreleased]: https://github.com/binbashar/helm-charts/compare/v0.0.11...HEAD
+[Unreleased]: https://github.com/binbashar/helm-charts/compare/v0.0.12...HEAD
+[v0.0.12]: https://github.com/binbashar/helm-charts/compare/v0.0.11...v0.0.12
 [v0.0.11]: https://github.com/binbashar/helm-charts/compare/v0.0.10...v0.0.11
 [v0.0.10]: https://github.com/binbashar/helm-charts/compare/v0.0.9...v0.0.10
 [v0.0.9]: https://github.com/binbashar/helm-charts/compare/v0.0.8...v0.0.9
