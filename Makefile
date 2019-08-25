@@ -34,7 +34,7 @@ release-patch-with-changelog: ## make changelog-patch && git add && git commit &
 		make changelog-patch;\
 		git status;\
 		git add CHANGELOG.md;\
-		git commit -m "Updating CHANGELOG.md via make changelog-patch for ${GIT_SEMTAG_VER_PATCH}";\
+		git commit -m "Updating CHANGELOG.md via make changelog-patchfor ${GIT_SEMTAG_VER_PATCH} [ci skip]";\
 		git push origin master;\
 		make release-patch;\
 	else\
@@ -63,7 +63,7 @@ release-minor-with-changelog: ## make changelog-minor && git add && git commit &
 		make changelog-minor;\
 		git status;\
 		git add CHANGELOG.md;\
-		git commit -m "Updating CHANGELOG.md via make changelog-minor for ${GIT_SEMTAG_VER_PATCH}";\
+		git commit -m "Updating CHANGELOG.md via make changelog-minorfor ${GIT_SEMTAG_VER_PATCH} [ci skip]";\
 		git push origin master;\
 		make release-minor;\
 	else\
@@ -84,7 +84,7 @@ release-major-with-changelog: ## make changelog-major && git add && git commit &
 		make changelog-major;\
 		git status;\
 		git add CHANGELOG.md;\
-		git commit -m "Updating CHANGELOG.md via make changelog-major for ${GIT_SEMTAG_VER_PATCH}";\
+		git commit -m "Updating CHANGELOG.md via make changelog-majorfor ${GIT_SEMTAG_VER_PATCH} [ci skip]";\
 		git push origin master;\
 		make release-major;\
 	else\
