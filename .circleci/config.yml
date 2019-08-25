@@ -6,12 +6,19 @@ jobs:
       image: ubuntu-1604:201903-01
       docker_layer_caching: true
 
+    filters:
+      branches:
+       only:  # only branches matching the below regex filters will run
+         - master
+         
     steps:
       - checkout
 
       - add_ssh_keys:
           fingerprints:
             - "f5:ca:b0:c5:06:26:aa:ec:c8:a7:75:57:f0:e7:c2:f3"
+
+
 
       - run: pwd
 
