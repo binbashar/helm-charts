@@ -5,6 +5,7 @@
 <a name="v0.0.12"></a>
 ## [v0.0.12] - 2019-08-25
 ### Pull Requests
+- Merge pull request [#6](https://github.com/binbashar/helm-charts/issues/6) from binbashar/BBL-100-circile-ci-auto-release
 - Merge pull request [#5](https://github.com/binbashar/helm-charts/issues/5) from binbashar/BBL-100-circile-ci-auto-release
 
 
