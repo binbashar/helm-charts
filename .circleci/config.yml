@@ -1,15 +1,10 @@
-version: 2
+version: 2.1
 
 jobs:
   release-patch-with-changelog:
     machine:
       image: ubuntu-1604:201903-01
       docker_layer_caching: true
-
-    filters:
-      branches:
-       only:  # only branches matching the below regex filters will run
-         - master
 
     steps:
       - checkout
@@ -44,4 +39,8 @@ workflows:
   version: 2
   changelog_and_release:
     jobs:
-      - release-patch-with-changelog
+      - release-patch-with-changelog:
+          filters:
+            branches:
+             only:  # only branches matching the below regex filters will run
+               - master
