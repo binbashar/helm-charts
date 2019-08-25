@@ -41,4 +41,4 @@ workflows:
   version: 2
   changelog_and_release:
     jobs:
-      - chagelog-patch
+      - release-patch-with-changelog
