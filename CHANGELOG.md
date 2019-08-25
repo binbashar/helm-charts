@@ -2,8 +2,11 @@
 ## [Unreleased]
 
 
+<a name="v0.0.15"></a>
+## [v0.0.15] - 0001-01-01
+
 <a name="v0.0.14"></a>
-## [v0.0.14] - 0001-01-01
+## [v0.0.14] - 2019-08-25
 
 <a name="v0.0.13"></a>
 ## [v0.0.13] - 2019-08-25
@@ -47,7 +50,8 @@
 <a name="v0.0.1"></a>
 ## v0.0.1 - 2019-08-24
 
-[Unreleased]: https://github.com/binbashar/helm-charts/compare/v0.0.14...HEAD
+[Unreleased]: https://github.com/binbashar/helm-charts/compare/v0.0.15...HEAD
+[v0.0.15]: https://github.com/binbashar/helm-charts/compare/v0.0.14...v0.0.15
 [v0.0.14]: https://github.com/binbashar/helm-charts/compare/v0.0.13...v0.0.14
 [v0.0.13]: https://github.com/binbashar/helm-charts/compare/v0.0.12...v0.0.13
 [v0.0.12]: https://github.com/binbashar/helm-charts/compare/v0.0.11...v0.0.12
