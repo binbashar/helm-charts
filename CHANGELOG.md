@@ -3,7 +3,10 @@
 
 
 <a name="v0.0.10"></a>
-## [v0.0.10] - 0001-01-01
+## [v0.0.10] - 2019-08-25
+### Pull Requests
+- Merge pull request [#1](https://github.com/binbashar/helm-charts/issues/1) from binbashar/BBL-100-circile-ci-auto-release
+
 
 <a name="v0.0.9"></a>
 ## [v0.0.9] - 2019-08-25
