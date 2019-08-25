@@ -13,7 +13,7 @@ jobs:
 
       - run: ls -ltra
 
-      - run: echo $(git status) |grep -q "nothing to commit, working directory clean"
+      - run: git status
 
       - run:
           name: make changelog-patch && git add && git commit && make release-patch
