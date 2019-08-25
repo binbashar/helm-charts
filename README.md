@@ -84,6 +84,7 @@ Root directory `Makefile` has the automated steps (to be integrated with **Circl
 
 ### CircleCi PR auto-release job
 - https://circleci.com/gh/binbashar/helm-charts
+- **NOTE:** Will only run after merged PR.
 
 ### Manual execution from workstation
 ```
