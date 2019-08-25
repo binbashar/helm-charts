@@ -7,8 +7,6 @@
 
 # helm-charts
 
-[![CircleCI](https://circleci.com/gh/binbashar/helm-charts.svg?style=svg)](https://circleci.com/gh/binbashar/helm-charts)
-
 ![GitHub](https://img.shields.io/github/license/binbashar/helm-charts.svg)
 ![GitHub language count](https://img.shields.io/github/languages/count/binbashar/helm-charts.svg)
 ![GitHub top language](https://img.shields.io/github/languages/top/binbashar/helm-charts.svg)
@@ -83,6 +81,10 @@ helm plugin install https://github.com/databus23/helm-diff --version master
 Root directory `Makefile` has the automated steps (to be integrated with **CircleCI jobs** []() )
 
 ### CircleCi PR auto-release job
+<div align="left">
+  <img src="https://raw.githubusercontent.com/binbashar/helm-charts/master/figures/circleci.png" alt="leverage" width="230"/>
+</div>
+
 - https://circleci.com/gh/binbashar/helm-charts
 - **NOTE:** Will only run after merged PR.
 
