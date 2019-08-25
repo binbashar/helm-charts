@@ -13,7 +13,14 @@ jobs:
 
       - run: ls -ltra
 
-      - run: if [[ git status | grep 'nothing to commit, working tree clean']]; then echo 'OK'
+      - run:
+          name: if test
+          command: |
+            if git status | grep 'nothing to commit, working tree clean'; then
+              echo 'OK'
+            else
+              echo 'FAILED'
+            fi
 
       - run:
           name: make changelog-patch && git add && git commit && make release-patch
