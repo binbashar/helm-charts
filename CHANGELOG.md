@@ -3,8 +3,9 @@
 
 
 <a name="v0.0.15"></a>
-## [v0.0.15] - 2019-08-25
+## [v0.0.15] - 2020-01-18
 ### Pull Requests
+- Merge pull request [#10](https://github.com/binbashar/helm-charts/issues/10) from binbashar/BBL-119-helm-leverage-sync
 - Merge pull request [#9](https://github.com/binbashar/helm-charts/issues/9) from binbashar/BBL-100-circile-ci-auto-release
 
 
