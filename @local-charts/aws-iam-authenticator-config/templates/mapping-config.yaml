@@ -1,0 +1,53 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aws-iam-authenticator
+  namespace: {{ .Release.Namespace }}
+  labels:
+    k8s-app: aws-iam-authenticator
+    app: {{ template "aws-iam-authenticator-config.name" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+data:
+  config.yaml: |
+    # a unique-per-cluster identifier to prevent replay attacks
+    clusterID: {{ .Values.clusterID }}
+    server:
+    {{ if .Values.mapRoles }}
+      mapRoles:
+      {{- range $role := .Values.mapRoles }}
+      - roleARN: {{ .roleARN }}
+        username: {{ .username }}
+        groups:
+        {{- range $group := .groups }}
+        - {{ . }}
+        {{- end }}
+      {{- end }}
+    {{ else }}
+      mapRoles: []
+    {{ end -}}
+    
+    {{ if .Values.mapUsers }}
+      mapUsers:
+      {{- range $user := .Values.mapUsers }}
+      - userARN: {{ .userARN }}
+        username: {{ .username }}
+        groups:
+        {{- range $group := .groups }}
+        - {{ . }}
+        {{- end }}
+      {{- end }}
+    {{ else }}
+      mapUsers: []
+    {{ end -}}
+    
+    {{ if .Values.mapAccounts }}
+      mapAccounts:
+      {{- range .Values.mapAccounts }}
+        - {{ . }}
+      {{- end }}
+    {{ else }}
+      mapAccounts: []
+    {{ end }}

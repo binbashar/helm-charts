@@ -1,0 +1,19 @@
+{{- if .Values.rbac.create -}}
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{ include "fluentd-daemonset.fullname" . }}
+  labels:
+    app: {{ template "fluentd-daemonset.name" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+subjects:
+- kind: ServiceAccount
+  name: {{ template "fluentd-daemonset.serviceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: ClusterRole
+  name: {{ include "fluentd-daemonset.fullname" . }}
+  apiGroup: rbac.authorization.k8s.io
+{{- end -}}
