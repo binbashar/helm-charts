@@ -1,0 +1,77 @@
+# App configuration: customize these values according to your needs
+app:
+  site:
+    host: ots.test.binbash.com.ar
+    domain: ots.test.binbash.com.ar
+    ssl: false
+    secret: UseYourOwnSecretHere
+  redis:
+    uri: redis://127.0.0.1:7179/0?timeout=10&thread_safe=false&logging=false
+    config: /etc/onetime/redis.conf
+  colonels:
+    - info@binbash.com.ar
+
+# Pod configuration
+pod:
+  replicas: 1
+  image:
+    repository: binbash/onetimesecret
+    tag: latest
+    pullPolicy: Always
+
+# Service configuration
+service:
+  podPort: 7143
+  servicePort: 9090
+
+#
+# Ingress
+#
+ingress:
+  ## If true, Kubernetes Dashboard Ingress will be created.
+  ##
+  enabled: true
+
+  ## Kubernetes Dashboard Ingress annotations
+  ##
+  ## Add custom labels
+  # labels:
+  #   key: value
+  annotations:
+    kubernetes.io/ingress.class: nginx-ingress-node-port
+  #   kubernetes.io/tls-acme: 'true'
+  ## If you plan to use TLS backend with enableInsecureLogin set to false
+  ## (default), you need to uncomment the below.
+  ## If you use ingress-nginx < 0.21.0
+  #   nginx.ingress.kubernetes.io/secure-backends: "true"
+  ## if you use ingress-nginx >= 0.21.0
+  #   nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+
+
+  ## Kubernetes Dashboard Ingress paths
+  ##
+  paths:
+    - /
+  #  - /*
+
+  ## Kubernetes Dashboard Ingress hostnames
+  ## Must be provided if Ingress is enabled
+  ##
+  hosts:
+    - ots.test.binbash.com.ar
+
+# Resource names overrides (optional)
+nameOverride: ""
+fullnameOverride: ""
+
+# Node selector settings
+nodeSelector: {}
+
+# Resources as defined in the original repository (https://github.com/hjacobs/kube-job-cleaner/blob/master/deploy/cronjob.yaml)
+resources:
+  limits:
+    cpu: 150m
+    memory: 120Mi
+  requests:
+    cpu: 100m
+    memory: 90Mi
