@@ -1,0 +1,35 @@
+#
+# Images Attributes
+#
+image:
+  repository: omnition/opencensus-collector
+  tag: 0.1.11
+
+#
+# Make sure you customize this as necessary
+#
+config: |
+  receivers:
+    opencensus:
+      port: 55678
+    zipkin:
+      port: 9411
+
+#
+# Pod Resource Requests and Limits
+#
+resources:
+  limits:
+    cpu: 1
+    memory: 2Gi
+  requests:
+    cpu: 200m
+    memory: 400Mi
+
+#
+# Pod Annoations
+#
+podAnnotations: {}
+  # prometheus.io/path: "/metrics"
+  # prometheus.io/port: "8888"
+  # prometheus.io/scrape: "true"

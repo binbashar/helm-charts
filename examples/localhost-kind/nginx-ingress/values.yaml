@@ -1,0 +1,28 @@
+
+controller:
+  # We want the nginx pods on every node
+  kind: DaemonSet
+  
+  # Use an explicit ingress class in case we need multiple later on
+  ingressClass: nginx-ingress-node-port
+
+  # Annotate pods for Prometheus scraping
+  podAnnotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "10254"
+    prometheus.io/path: "/metrics"
+  
+  service:
+    externalTrafficPolicy: Local # Make sure the source IP address is preserved
+    type: NodePort # default: "LoadBalancer" ("ClusterIP", "ExternalName", "NodePort")
+    nodePorts:
+      http: 32080
+      https: 32443
+#    tcp:
+#      9090: 9090
+
+    annotations:
+      # For test we want an internal load balancer
+      #service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
+      # Use a Network Load Balancer
+      #service.beta.kubernetes.io/aws-load-balancer-type: nlb

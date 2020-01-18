@@ -46,7 +46,7 @@ helm plugin install https://github.com/databus23/helm-diff --version master
 ```
 
 # Files and Directories
-- There are only two types of directories `charts` and environments such as `dev` or `prd`
+- There are only two types of directories `@local-charts` and environments such as `examples`, `dev`, `prd`
 - Charts directory contains local charts that later on can be moved to a separate repository
 - Environment directories contain the Helmsman's desired state file that define what charts are deployed to each environment
 
@@ -72,75 +72,35 @@ helm plugin install https://github.com/databus23/helm-diff --version master
 - Once you are done you can move on to add your chart to any of the environments in this repository
 
 
+## TODO
+
+Develop a Terraform 0.12 compatible module: `terraform-aws-organizations` -> https://registry.terraform.io/modules/binbashar
+
+---
+
 # Release Management
 
 ## Docker based makefile commands
-- https://cloud.docker.com/u/binbash/repository/docker/binbash/git-release
-- https://github.com/binbashar/helm-charts/blob/master/Makefile
+
+* <https://cloud.docker.com/u/binbash/repository/docker/binbash/git-release>
+* <https://github.com/binbashar/bb-devops-tf-aws-organizations/blob/master/Makefile>
 
 Root directory `Makefile` has the automated steps (to be integrated with **CircleCI jobs** []() )
 
 ### CircleCi PR auto-release job
+
 <div align="left">
-  <img src="https://raw.githubusercontent.com/binbashar/helm-charts/master/figures/circleci.png" alt="leverage-circleci" width="230"/>
+  <img src="https://raw.githubusercontent.com/binbashar/bb-devops-tf-aws-organizations/master/figures/circleci.png" alt="leverage-circleci" width="230"/>
 </div>
 
-- https://circleci.com/gh/binbashar/helm-charts
+- <https://circleci.com/gh/binbashar/bb-devops-tf-aws-organizations>
 - **NOTE:** Will only run after merged PR.
 
 ### Manual execution from workstation
+
 ```
 $ make
 Available Commands:
  - release-major-with-changelog make changelog-major && git add && git commit && make release-major
  - release-minor-with-changelog make changelog-minor && git add && git commit && make release-minor
  - release-patch-with-changelog make changelog-patch && git add && git commit && make release-patch
- ```
-
-Sample execution output:
-```
-# delivery @ delivery-I7567 in ~/Binbash/repos/BB-Leverage/helm/helm-charts on git:master o [20:06:43]
-$ make release-patch-with-changelog
-
-make[1]: Entering directory '/home/delivery/Binbash/repos/BB-Leverage/helm/helm-charts'
-docker run --rm -v /home/delivery/Binbash/repos/BB-Leverage/helm/helm-charts:/data -it binbash/git-release -o CHANGELOG.md --next-tag v0.0.7
-⌚️  Generating changelog ...
-✨  Generate of "CHANGELOG.md" is completed! (18.360179ms)
-sudo chown -R delivery:delivery ./.chglog
-sudo chown -R delivery:delivery ./CHANGELOG.md
-
-make[1]: Leaving directory '/home/delivery/Binbash/repos/BB-Leverage/helm/helm-charts'
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        modified:   CHANGELOG.md
-
-no changes added to commit (use "git add" and/or "git commit -a")
-[master 62ed47f] Updating CHANGELOG.md via make changelog-patch for v0.0.7
- 1 file changed, 5 insertions(+), 1 deletion(-)
-Counting objects: 3, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 392 bytes | 0 bytes/s, done.
-Total 3 (delta 2), reused 0 (delta 0)
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To git@github.com:binbashar/helm-charts.git
-   f579566..62ed47f  master -> master
-
-make[1]: Entering directory '/home/delivery/Binbash/repos/BB-Leverage/helm/helm-charts'
-# pre-req -> https://github.com/pnikosis/semtag
-docker run --rm -v /home/delivery/Binbash/repos/BB-Leverage/helm/helm-charts:/data:rw -v ~/.ssh:/root/.ssh -v ~/.gitconfig:/etc/gitconfig --entrypoint=/opt/semtag/semtag/semtag -it binbash/git-release get
-Current final version: v0.0.6
-Last tagged version:   v0.0.6
-
-docker run --rm -v /home/delivery/Binbash/repos/BB-Leverage/helm/helm-charts:/data:rw -v ~/.ssh:/root/.ssh -v ~/.gitconfig:/etc/gitconfig --entrypoint=/opt/semtag/semtag/semtag -it binbash/git-release final -s patch
-Counting objects: 1, done.
-Writing objects: 100% (1/1), 277 bytes | 0 bytes/s, done.
-Total 1 (delta 0), reused 0 (delta 0)
-To github.com:binbashar/helm-charts.git
- * [new tag]         v0.0.7 -> v0.0.7
-v0.0.7
-make[1]: Leaving directory '/home/delivery/Binbash/repos/BB-Leverage/helm/helm-charts'
-```
