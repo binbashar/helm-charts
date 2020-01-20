@@ -2,6 +2,12 @@
 ## [Unreleased]
 
 
+<a name="v0.0.16"></a>
+## [v0.0.16] - 2020-01-20
+### Pull Requests
+- Merge pull request [#11](https://github.com/binbashar/helm-charts/issues/11) from binbashar/BBL-119-helm-leverage-sync
+
+
 <a name="v0.0.15"></a>
 ## [v0.0.15] - 2020-01-18
 ### Pull Requests
@@ -67,7 +73,8 @@
 <a name="v0.0.1"></a>
 ## v0.0.1 - 2019-08-24
 
-[Unreleased]: https://github.com/binbashar/helm-charts/compare/v0.0.15...HEAD
+[Unreleased]: https://github.com/binbashar/helm-charts/compare/v0.0.16...HEAD
+[v0.0.16]: https://github.com/binbashar/helm-charts/compare/v0.0.15...v0.0.16
 [v0.0.15]: https://github.com/binbashar/helm-charts/compare/v0.0.14...v0.0.15
 [v0.0.14]: https://github.com/binbashar/helm-charts/compare/v0.0.13...v0.0.14
 [v0.0.13]: https://github.com/binbashar/helm-charts/compare/v0.0.12...v0.0.13
