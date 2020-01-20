@@ -74,7 +74,7 @@ helm plugin install https://github.com/databus23/helm-diff --version master
 
 ## TODO
 
-Develop a Terraform 0.12 compatible module: `terraform-aws-organizations` -> https://registry.terraform.io/modules/binbashar
+Complete and test `/examples/aws-eks` & `/examples/aws-kops` `values.yml` for every supported chart. 
 
 ---
 
@@ -83,17 +83,17 @@ Develop a Terraform 0.12 compatible module: `terraform-aws-organizations` -> htt
 ## Docker based makefile commands
 
 * <https://cloud.docker.com/u/binbash/repository/docker/binbash/git-release>
-* <https://github.com/binbashar/bb-devops-tf-aws-organizations/blob/master/Makefile>
+* <https://github.com/binbashar/helm-charts/blob/master/Makefile>
 
 Root directory `Makefile` has the automated steps (to be integrated with **CircleCI jobs** []() )
 
 ### CircleCi PR auto-release job
 
 <div align="left">
-  <img src="https://raw.githubusercontent.com/binbashar/bb-devops-tf-aws-organizations/master/figures/circleci.png" alt="leverage-circleci" width="230"/>
+  <img src="https://raw.githubusercontent.com/binbashar/helm-charts/master/figures/circleci.png" alt="leverage-circleci" width="230"/>
 </div>
 
-- <https://circleci.com/gh/binbashar/bb-devops-tf-aws-organizations>
+- <https://circleci.com/gh/binbashar/helm-charts>
 - **NOTE:** Will only run after merged PR.
 
 ### Manual execution from workstation
