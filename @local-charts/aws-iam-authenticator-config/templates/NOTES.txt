@@ -1,5 +1,0 @@
-Thank you for installing {{ .Chart.Name | title }}.
-
-Your release is named {{ .Release.Name | title }}.
-
-IMPORTANT: this chart takes care of updating the ConfigMap used by aws-iam-authenticator but you still MUST delete or restart the running pod so that the changes to the ConfigMap is picked up.

@@ -1,6 +1,0 @@
-#
-# Use this file to override default chart values with the ones that correspond
-# to the target environment
-#
-cronJob:
-  schedule: "0 0 * * *"
