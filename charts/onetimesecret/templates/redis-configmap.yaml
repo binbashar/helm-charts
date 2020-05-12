@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "onetimesecret.fullname" . }}-redis-config
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ template "onetimesecret.name" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+data:
+  redis.conf: |-
+    # One-Time Secret Redis Config
+    # 2014-12-03
+
+    pidfile /var/run/onetime/redis.pid
+    logfile /var/log/onetime/redis.log
+    dir /var/lib/onetime/redis/
+    dbfilename default.rdb
+    appendfilename default.aof
+
+    bind 127.0.0.1
+    port 7179
+    databases 16
+
+    timeout 30
+    daemonize yes
+    loglevel warning
+
+    rdbcompression no
+
+    appendonly no
+
+    # appendfsync is one of always, everysec, no
+    appendfsync no

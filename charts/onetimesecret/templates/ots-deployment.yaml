@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "onetimesecret.fullname" . }}-deploy
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ template "onetimesecret.name" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  replicas: {{ .Values.pod.replicas }}
+  selector:
+    matchLabels:
+      app: {{ template "onetimesecret.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "onetimesecret.name" . }}
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}-pod
+        image: {{ .Values.pod.image.repository }}:{{ .Values.pod.image.tag }}
+        imagePullPolicy: {{ .Values.pod.image.pullPolicy }}
+        ports:
+        - containerPort: {{ .Values.service.podPort }}
+          name: http
+          protocol: TCP
+        resources:
+          {{- toYaml .Values.resources | trim | nindent 10 }}
+        volumeMounts:
+        - name: onetimesecretconfig
+          mountPath: /etc/onetime/config
+          subPath: config
+        - name: redisconfig
+          mountPath: /etc/onetime/redis.conf
+          subPath: redis.conf
+      terminationGracePeriodSeconds: 0
+      volumes:
+      - name: onetimesecretconfig
+        configMap:
+          name: {{ include "onetimesecret.fullname" . }}-ots-config
+      - name: redisconfig
+        configMap:
+          name: {{ include "onetimesecret.fullname" . }}-redis-config
+      {{- if .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml .Values.nodeSelector | trim | nindent 8 }}
+      {{- end }}

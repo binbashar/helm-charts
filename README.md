@@ -14,3 +14,8 @@
 
 # Overview
 This is BinBash' Helm Charts repository.
+
+# Files Structure
+* charts/         => This is where you can find the charts code.
+* index.yaml      => The index of the repository. It has information about all available charts.
+* Makefile        => A simple helper for typical tasks of this Helm repository.
