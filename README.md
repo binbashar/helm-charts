@@ -19,3 +19,12 @@ This is BinBash' Helm Charts repository.
 * charts/         => This is where you can find the charts code.
 * index.yaml      => The index of the repository. It has information about all available charts.
 * Makefile        => A simple helper for typical tasks of this Helm repository.
+
+# Chart Development Workflow
+* Create your new chart in the charts/ directory or modify an existing chart
+* Make sure you update the Chart.yaml file of your chart to reflect the new version
+
+# Chart Release Workflow
+* Lint charts: `make lint`
+* Package charts: `make package`
+* Update index file: `make index`
