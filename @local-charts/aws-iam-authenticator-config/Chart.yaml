@@ -1,5 +1,0 @@
-apiVersion: v1
-appVersion: "1.0"
-description: A Helm chart for defining AWS IAM Authenticator mapping configuration (https://github.com/kubernetes-sigs/aws-iam-authenticator#full-configuration-format)
-name: aws-iam-authenticator-config
-version: 0.1.0
