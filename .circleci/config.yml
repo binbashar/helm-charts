@@ -42,7 +42,7 @@ jobs:
 
       - run:
           name: Release New Helm Chart Versions with index.yaml update
-          command: make package
+          command: make package-release
 
 #
 # Jobs workflow

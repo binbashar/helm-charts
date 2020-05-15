@@ -37,6 +37,17 @@ package-cmd:
 	mv index.yaml ./packages
 	mv *.tgz ./packages
 
+package-release: package-release-cmd helm-dir-chmod ## Package helm charts
+package-release-cmd:
+	${HELM_CMD} repo index --url https://binbashar.github.io/helm-charts/ --merge index.yaml .
+	${HELM_CMD} package charts/*
+	mv index.yaml ./packages
+	mv *.tgz ./packages
+	git status
+	git add packages
+	git commit -m "Releasing latest Helm Chart versions [ci skip]"
+	git push origin master
+
 index: index-cmd helm-dir-chmod ## Update the index of this helm repository
 index-cmd:
 	${HELM_CMD} repo index --url https://binbashar.github.io/helm-charts/ --merge index.yaml .
