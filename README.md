@@ -1,8 +1,10 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/binbashar/helm-charts/master/figures/binbash.png" alt="drawing" width="350"/>
+    <img src="https://raw.githubusercontent.com/binbashar/helm-charts/master/@doc/figures/binbash-logo.png" 
+    alt="drawing" width="250"/>
 </div>
 <div align="right">
-  <img src="https://raw.githubusercontent.com/binbashar/helm-charts/master/figures/binbash-leverage-helm.png" alt="leverage" width="230"/>
+  <img src="https://raw.githubusercontent.com/binbashar/helm-charts/master/@doc/figures/binbash-leverage-helm-logo.png" 
+  alt="leverage" width="130"/>
 </div>
 
 # helm-charts
@@ -16,9 +18,9 @@
 This is BinBash' Helm Charts repository.
 
 # Files Structure
-* charts/         => This is where you can find the charts code.
-* index.yaml      => The index of the repository. It has information about all available charts.
-* Makefile        => A simple helper for typical tasks of this Helm repository.
+* charts/               => This is where you can find the charts code.
+* packages/index.yaml   => The index of the repository. It has information about all available charts.
+* Makefile              => A simple helper for typical tasks of this Helm repository.
 
 # Chart Development Workflow
 * Create your new chart in the charts/ directory or modify an existing chart
@@ -28,3 +30,14 @@ This is BinBash' Helm Charts repository.
 * Lint charts: `make lint`
 * Package charts: `make package`
 * Update index file: `make index`
+
+# Release Management
+### CircleCi PR auto-release job
+
+<div align="left">
+  <img src="https://raw.githubusercontent.com/binbashar/helm-charts/master/@doc/figures/circleci-logo.png" alt="circleci" width="130"/>
+</div>
+
+- [**pipeline-job**](https://circleci.com/gh/binbashar/helm-charts) (**NOTE:** Will only run after merged PR)
+- [**releases**](https://github.com/binbashar/helm-charts/releases)
+- [**changelog**](https://github.com/binbashar/helm-charts/blob/master/CHANGELOG.md)

@@ -1,0 +1,65 @@
+version: 2.1
+
+jobs:
+  #
+  # Tests: Lint
+  #
+  test-static-code-and-linting:
+    machine:
+      image: ubuntu-1604:201903-01 # Ubuntu 16.04, docker 18.09.3, docker-compose 1.23.1
+
+      # This job has been blocked because Docker Layer Caching is not available on your plan.
+      # Should upgrade if necessary.
+      docker_layer_caching: false
+
+    steps:
+      - checkout
+
+      - run:
+          name: Context Info Cmds
+          command: pwd && ls -ltra && git branch
+
+      - run:
+          name: Test Helm Lint
+          command: make lint
+  #
+  # Release
+  #
+  release-versions:
+    machine:
+      image: ubuntu-1604:201903-01
+      docker_layer_caching: false
+
+    environment:
+      VERSION_NUMBER: patch # opts: patch, minor or major.
+
+    steps:
+      - checkout
+
+      - run:
+          name: Context Info Cmds
+          command: pwd && ls -ltra && git branch
+
+      - run:
+          name: Release New Helm Chart Versions with index.yaml update
+          command: make package-release
+
+#
+# Jobs workflow
+#
+workflows:
+  version: 2
+  test_and_release:
+    jobs:
+      - test-static-code-and-linting:
+          context: binbashar-org-global-context
+          filters:
+            branches:
+             ignore: # only branches matching the below regex filters will run
+               - master
+      - release-versions:
+          context: binbashar-org-global-context
+          filters:
+            branches:
+             only: # only branches matching the below regex filters will run
+               - master
