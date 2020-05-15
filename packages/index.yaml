@@ -3,7 +3,7 @@ entries:
   aws-iam-authenticator-config:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-14T15:19:18.908638056Z"
+    created: "2020-05-15T16:00:20.323773802Z"
     description: A Helm chart for defining AWS IAM Authenticator mapping configuration
       (https://github.com/kubernetes-sigs/aws-iam-authenticator#full-configuration-format)
     digest: e3e5f096bb61506991232a5754ac213308d99036cec27381e39a3fc0fbe28897
@@ -11,40 +11,77 @@ entries:
     urls:
     - https://binbashar.github.io/helm-charts/packages/aws-iam-authenticator-config-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-15T16:00:21.233242161Z"
+    description: A Helm chart for defining AWS IAM Authenticator mapping configuration
+      (https://github.com/kubernetes-sigs/aws-iam-authenticator#full-configuration-format)
+    digest: sha256:6320edc8fa8f817276f9a0f341845b069f21c4897facb366da0f2b02627167c3
+    name: aws-iam-authenticator-config
+    urls:
+    - http://127.0.0.1:8879/charts/aws-iam-authenticator-config-0.1.0.tgz
+    version: 0.1.0
   cert-manager-crds:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-14T15:19:18.910958961Z"
+    created: "2020-05-15T16:00:20.328376094Z"
     description: A Helm chart to install cert-manager CRDs
     digest: 6534ac4a8117c46e53bfbe119638f25df9f9bec2bbd0f08f71de16ff10fcb875
     name: cert-manager-crds
     urls:
     - https://binbashar.github.io/helm-charts/packages/cert-manager-crds-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-15T16:00:21.266866999Z"
+    description: A Helm chart to install cert-manager CRDs
+    digest: sha256:a5f55efee89a6d8cd52e890431f567f7a410f70d1a28d3985f114ca46dbe36f1
+    name: cert-manager-crds
+    urls:
+    - http://127.0.0.1:8879/charts/cert-manager-crds-0.1.0.tgz
+    version: 0.1.0
   cert-manager-issuer:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-14T15:19:18.911131735Z"
+    created: "2020-05-15T16:00:20.328671999Z"
     description: A Helm chart to create a cert-manager issuer
     digest: b95ea85cf552ae94bc92fe2755a5f46286b28cf54942b788ebdbb54f8cf3ee31
     name: cert-manager-issuer
     urls:
     - https://binbashar.github.io/helm-charts/packages/cert-manager-issuer-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-15T16:00:21.273519694Z"
+    description: A Helm chart to create a cert-manager issuer
+    digest: sha256:14109c821b62a4eee2d7952a9066dd2e0c1af28504ac7528c686c99cdb025db6
+    name: cert-manager-issuer
+    urls:
+    - http://127.0.0.1:8879/charts/cert-manager-issuer-0.1.0.tgz
+    version: 0.1.0
   fluentd-daemonset:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-14T15:19:18.911355535Z"
+    created: "2020-05-15T16:00:20.328975086Z"
     description: A Helm chart for installing FluentD DaemonSet
     digest: 753ce3fa89a6b0beb47a01eef342c3b987d201dbbb67812ee5d9a36693757e7c
     name: fluentd-daemonset
     urls:
     - https://binbashar.github.io/helm-charts/packages/fluentd-daemonset-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-15T16:00:21.279519506Z"
+    description: A Helm chart for installing FluentD DaemonSet
+    digest: sha256:91604add27b196404c2ed9c82ec377bb0b900a571967da23082602be69455717
+    name: fluentd-daemonset
+    urls:
+    - http://127.0.0.1:8879/charts/fluentd-daemonset-0.1.0.tgz
+    version: 0.1.0
   istio:
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2020-05-14T15:19:18.916628812Z"
+    created: "2020-05-15T16:00:20.336234364Z"
     description: Helm chart for all istio components
     digest: 7e1dfb8490d4ff5fd79fca0020a4e6ba041e2f09a70f786c75e650ccabbf5fc5
     engine: gotpl
@@ -63,10 +100,31 @@ entries:
     urls:
     - https://binbashar.github.io/helm-charts/packages/istio-1.1.0.tgz
     version: 1.1.0
+  - apiVersion: v1
+    appVersion: 1.1.0
+    created: "2020-05-15T16:00:21.350399482Z"
+    description: Helm chart for all istio components
+    digest: sha256:e266849a8b3cf907a236e608bfab7827bdcd52848ab6397989ec767bebbf1be2
+    engine: gotpl
+    icon: https://istio.io/favicons/android-192x192.png
+    keywords:
+    - istio
+    - security
+    - sidecarInjectorWebhook
+    - mixer
+    - pilot
+    - galley
+    name: istio
+    sources:
+    - http://github.com/istio/istio
+    tillerVersion: '>=2.7.2-0'
+    urls:
+    - http://127.0.0.1:8879/charts/istio-1.1.0.tgz
+    version: 1.1.0
   istio-init:
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2020-05-14T15:19:18.917259448Z"
+    created: "2020-05-15T16:00:20.336996476Z"
     description: Helm chart to initialize Istio CRDs
     digest: 3fb456a9918228e1de68bd85568c72714026e8c72c7a89eaa154794dd260dd50
     engine: gotpl
@@ -81,30 +139,65 @@ entries:
     urls:
     - https://binbashar.github.io/helm-charts/packages/istio-init-1.1.0.tgz
     version: 1.1.0
+  - apiVersion: v1
+    appVersion: 1.1.0
+    created: "2020-05-15T16:00:21.35986934Z"
+    description: Helm chart to initialize Istio CRDs
+    digest: sha256:62073099d66526fc62bdc2f5d34bd1dc05e5b3f132a766f92a3956527b5786b0
+    engine: gotpl
+    icon: https://istio.io/favicons/android-192x192.png
+    keywords:
+    - istio
+    - crd
+    name: istio-init
+    sources:
+    - http://github.com/istio/istio
+    tillerVersion: '>=2.7.2-0'
+    urls:
+    - http://127.0.0.1:8879/charts/istio-init-1.1.0.tgz
+    version: 1.1.0
   jaeger:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-14T15:19:18.917482171Z"
+    created: "2020-05-15T16:00:20.337294939Z"
     description: A Helm chart for installing Jaeger
     digest: b60d6b78fb8924f8b6c5403ba668e280bcce31063ee9e8b60b226f3891e054db
     name: jaeger
     urls:
     - https://binbashar.github.io/helm-charts/packages/jaeger-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-15T16:00:21.369484901Z"
+    description: A Helm chart for installing Jaeger
+    digest: sha256:92a81f2b16797d89caeba2e1f047db4566654da8dda934277e9694046d5cd976
+    name: jaeger
+    urls:
+    - http://127.0.0.1:8879/charts/jaeger-0.1.0.tgz
+    version: 0.1.0
   kube-job-cleaner:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-14T15:19:18.918167363Z"
+    created: "2020-05-15T16:00:20.337999513Z"
     description: A Helm chart for installing Kubernetes Job Cleaner (https://github.com/hjacobs/kube-job-cleaner)
     digest: 869a2d3280542a330f563519d5f6d753406e1a52803cd334005ee64fa5c25b3c
     name: kube-job-cleaner
     urls:
     - https://binbashar.github.io/helm-charts/packages/kube-job-cleaner-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-15T16:00:21.375815566Z"
+    description: A Helm chart for installing Kubernetes Job Cleaner (https://github.com/hjacobs/kube-job-cleaner)
+    digest: sha256:bcb20848e3cfcb0c1159858af93c07177c070986f3b55863b313e780b7705a72
+    name: kube-job-cleaner
+    urls:
+    - http://127.0.0.1:8879/charts/kube-job-cleaner-0.1.0.tgz
+    version: 0.1.0
   linkerd2:
   - apiVersion: v1
     appVersion: stable-2.5.0
-    created: "2020-05-14T15:19:18.919263401Z"
+    created: "2020-05-15T16:00:20.340495328Z"
     description: Linkerd gives you observability, reliability, and security for your
       microservices — with no code change required.
     digest: e2790f48eb1d0b8c23e2a1e052dd5c3e8bf81a21263f86cd5445e0c0d0741fcc
@@ -118,24 +211,58 @@ entries:
     urls:
     - https://binbashar.github.io/helm-charts/packages/linkerd2-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v1
+    appVersion: stable-2.5.0
+    created: "2020-05-15T16:00:21.39199688Z"
+    description: Linkerd gives you observability, reliability, and security for your
+      microservices — with no code change required.
+    digest: sha256:3a91326157304988ea3fa636e3840b626836360a6e73ed2359d24a560427f351
+    home: https://linkerd.io
+    keywords:
+    - service-mesh
+    kubeVersion: '>=1.12.0-0'
+    name: linkerd2
+    sources:
+    - https://github.com/linkerd/linkerd2/
+    urls:
+    - http://127.0.0.1:8879/charts/linkerd2-0.1.0.tgz
+    version: 0.1.0
   onetimesecret:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-14T15:19:18.919508049Z"
+    created: "2020-05-15T16:00:20.34166911Z"
     description: A Helm chart for installing OneTimeSecret (https://github.com/onetimesecret/onetimesecret)
     digest: 061d58ef9bc74082d25d1887cdcded91e9e2361a9c85d4512525cf8a61cc7b76
     name: onetimesecret
     urls:
     - https://binbashar.github.io/helm-charts/packages/onetimesecret-0.1.1.tgz
     version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-15T16:00:21.401779299Z"
+    description: A Helm chart for installing OneTimeSecret (https://github.com/onetimesecret/onetimesecret)
+    digest: sha256:aa0c8e8cb46c7c1dd05eced204afcfbbd90d9b68219695afce10998abdcdb6a6
+    name: onetimesecret
+    urls:
+    - http://127.0.0.1:8879/charts/onetimesecret-0.1.1.tgz
+    version: 0.1.1
   opencensus:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-14T15:19:18.919677306Z"
+    created: "2020-05-15T16:00:20.342039361Z"
     description: A Helm chart for installing OpenCensus Collector
     digest: 1edffd13155cfeda381d05920f41e024affe5c36cd17f6780e0924d6d7e4dee7
     name: opencensus
     urls:
     - https://binbashar.github.io/helm-charts/packages/opencensus-0.1.0.tgz
     version: 0.1.0
-generated: "2020-05-14T15:19:18.908262254Z"
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-15T16:00:21.408398235Z"
+    description: A Helm chart for installing OpenCensus Collector
+    digest: sha256:00f383becb5072579bd593d4771521ffdd1c015439e53a644cf9f90626165fa3
+    name: opencensus
+    urls:
+    - http://127.0.0.1:8879/charts/opencensus-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-05-15T16:00:20.323246884Z"
