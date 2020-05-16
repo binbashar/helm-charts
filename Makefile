@@ -42,6 +42,7 @@ package-release-cmd:
 	${HELM_CMD} package charts/*
 	mv *.tgz ./packages
 	git status
+	git add index.yaml
 	git add packages
 	git commit -m "Releasing latest Helm Chart versions [ci skip]"
 	git push origin master
