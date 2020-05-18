@@ -32,15 +32,15 @@ lint: ## Lint helm charts
 
 package: package-cmd helm-dir-chmod ## Package helm charts
 package-cmd:
-	${HELM_CMD} repo index --url https://binbashar.github.io/helm-charts/ --merge index.yaml .
 	${HELM_CMD} package charts/*
 	mv *.tgz ./packages
+	${HELM_CMD} repo index --url https://binbashar.github.io/helm-charts/ --merge index.yaml .
 
 package-release: package-release-cmd helm-dir-chmod ## Package helm charts
 package-release-cmd:
-	${HELM_CMD} repo index --url https://binbashar.github.io/helm-charts/ --merge index.yaml .
 	${HELM_CMD} package charts/*
 	mv *.tgz ./packages
+	${HELM_CMD} repo index --url https://binbashar.github.io/helm-charts/ --merge index.yaml .
 	git status
 	git add index.yaml
 	git add packages
