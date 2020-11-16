@@ -8,12 +8,14 @@
 !*.circleci
 !*.dockeringnore
 !*.hosts
+!.hosts.example
 !*.gitignore
 !/.chglog
 !/.gitallowed
 !/.github
 !*.gitkeep
 !*.editorconfig
+!*.pre-commit-config.yaml
 
 # SSH keys #
 ############
@@ -86,6 +88,13 @@ Thumbs.db
 *.vagrant
 *rclone.conf
 
+# Project files #
+####################
+#
 # Secret Files
-########################
+#
 *secrets.dec.*
+#
+# Project specific files #
+#
+/@bin/makefiles
