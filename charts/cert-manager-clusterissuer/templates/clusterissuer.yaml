@@ -22,7 +22,12 @@ spec:
             {{ if .Values.clusterissuer.route53.hostedZoneID -}}
             hostedZoneID: {{ .Values.clusterissuer.route53.hostedZoneID }}
             {{ end -}}
+            {{ if .Values.clusterissuer.route53.role -}}
+            role: {{ .Values.clusterissuer.route53.role }}
+            {{ end -}}
+            {{ if .Values.clusterissuer.route53.accessKeyID -}}
             accessKeyID: {{ .Values.clusterissuer.route53.accessKeyID }}
             secretAccessKeySecretRef:
               name: {{ include "cert-manager-clusterissuer.fullname" . }}-secret-access-key
               key: secret-access-key
+            {{ end -}}
