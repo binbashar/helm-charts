@@ -14,7 +14,18 @@ clusterissuer:
   # NOTE: at the moment only route53 is supported
   #
   route53:
-    region: YOUR-AWS-REGION
-    hostedZoneID: false
-    accessKeyID: YOUR-ACCESS-KEY-ID
-    secretAccessKeySecret: YOUR-ACCESS-KEY-SECRET
+    region: us-east-1
+    # Optional: you can limit by hosted zone id
+    # hostedZoneID: YOUR_HOSTED_ZONE_ID
+
+    # Optional: you can assume a role to obtain the permissions make changes to route53
+    # role: arn:aws:iam::YYYYYYYYYYYY:role/your-dns-manager-role
+
+    # Optional: you can use programmatic keys
+    # accessKeyID: YOUR_ACCESS_KEY_ID
+    # secretAccessKey: YOUR_SECRET_ACCESS_KEY
+
+    # Note: if you don't use any of the above, you still have a couple of
+    # options to get cert-manager the permissions it needs on route53
+    #   1. AWS EC2 instance instance profile
+    #   2. AWS EKS IRSA (IAM Roles for Service Accounts)
