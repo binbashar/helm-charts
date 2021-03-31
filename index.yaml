@@ -1,12 +1,22 @@
 apiVersion: v1
 entries:
+  argocd-application:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-03-31T11:39:25.713325027Z"
+    description: A Helm chart to create an ArgoCD Application
+    digest: c873457ff4bf747d34121bba3650b98539c475fbe27bf3482c9fb73d1aa2f388
+    name: argocd-application
+    urls:
+    - https://binbashar.github.io/helm-charts/packages/argocd-application-0.1.0.tgz
+    version: 0.1.0
   aws-iam-authenticator-config:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-30T17:56:51.994171444Z"
+    created: "2021-03-31T11:39:25.713589606Z"
     description: A Helm chart for defining AWS IAM Authenticator mapping configuration
       (https://github.com/kubernetes-sigs/aws-iam-authenticator#full-configuration-format)
-    digest: 2c77b4b59a108d5e3b09741913d5dc9307bee5feff0bb60c17bbaa77a388ade5
+    digest: bc4c6c1f652c3562863e11f93e6db95d0f3e82fc5bbdce657a7fd7fbd4db7ef1
     name: aws-iam-authenticator-config
     urls:
     - https://binbashar.github.io/helm-charts/packages/aws-iam-authenticator-config-0.1.0.tgz
@@ -14,16 +24,16 @@ entries:
   cert-manager-clusterissuer:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-30T17:56:51.994668239Z"
+    created: "2021-03-31T11:39:25.715047082Z"
     description: A Helm chart to create a cert-manager clusterissuer
-    digest: 1ffa1d87c42d8a21fc7069ce7eda8e6f8e5f4d70b70b32717ea237e901acf3bd
+    digest: 1a4029a44fa9a7ed91cd1e5e9c2b67e1712375f5764b1a43fb76f57931c38a94
     name: cert-manager-clusterissuer
     urls:
     - https://binbashar.github.io/helm-charts/packages/cert-manager-clusterissuer-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-30T17:56:51.994419518Z"
+    created: "2021-03-31T11:39:25.714647364Z"
     description: A Helm chart to create a cert-manager clusterissuer
     digest: 2806cdb93d4a57322486d4b286f5e320f3179699172145aac42e02b9b0da5b4e
     name: cert-manager-clusterissuer
@@ -33,9 +43,9 @@ entries:
   cert-manager-crds:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-30T17:56:51.998376856Z"
+    created: "2021-03-31T11:39:25.719007126Z"
     description: A Helm chart to install cert-manager CRDs
-    digest: 2928a3219be30ebd246e232505eb3dc941de76d6079a0809dee9452867e977ef
+    digest: c27820d0fdb3f6ed9d6e8afd0accd62660bd5d540c10f0280590f33e21c59efa
     name: cert-manager-crds
     urls:
     - https://binbashar.github.io/helm-charts/packages/cert-manager-crds-0.1.0.tgz
@@ -43,9 +53,9 @@ entries:
   cert-manager-issuer:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-30T17:56:51.998914891Z"
+    created: "2021-03-31T11:39:25.719302174Z"
     description: A Helm chart to create a cert-manager issuer
-    digest: 69f698747553c59ed7a47a79fc4245aeb16736d8e91113c7bc6a4e05267a6365
+    digest: 6ea9155ef60b8c024ae53b9d4ad2e7d2001ad275a396d13c3c3051392f18b0fc
     name: cert-manager-issuer
     urls:
     - https://binbashar.github.io/helm-charts/packages/cert-manager-issuer-0.1.0.tgz
@@ -53,9 +63,9 @@ entries:
   fluentd-daemonset:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-30T17:56:51.999496355Z"
+    created: "2021-03-31T11:39:25.719636644Z"
     description: A Helm chart for installing FluentD DaemonSet
-    digest: fcfcc86f5ea9cde0be70ffa0de0f25cff716dd08f6d0d47194c6b56fc4592a8f
+    digest: d50d9d379bf94af8c58044849a18a3e49dd62ebf67b3ab7d6db9ba585f18b3f5
     name: fluentd-daemonset
     urls:
     - https://binbashar.github.io/helm-charts/packages/fluentd-daemonset-0.1.0.tgz
@@ -63,9 +73,9 @@ entries:
   istio:
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2021-01-30T17:56:52.008256117Z"
+    created: "2021-03-31T11:39:25.726786249Z"
     description: Helm chart for all istio components
-    digest: f6710c9a2ac71f1b91667c9317a5640919cada03336490806dd6fdcc2ee11ce7
+    digest: 09dd7cc989f1c83115899f863bbba26a96997e9490c783fa6f768bf609eb7475
     engine: gotpl
     icon: https://istio.io/favicons/android-192x192.png
     keywords:
@@ -85,9 +95,9 @@ entries:
   istio-init:
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2021-01-30T17:56:52.009169558Z"
+    created: "2021-03-31T11:39:25.72754675Z"
     description: Helm chart to initialize Istio CRDs
-    digest: 1ffcf55d0cd2e3edca99edaeb55e36e4f8f9902f19f5503f1f877f1eea2e0534
+    digest: 8630f810646019bd5f3a46d2fd5d3d71d98e3876f8ef8b639264ff6403e5fe07
     engine: gotpl
     icon: https://istio.io/favicons/android-192x192.png
     keywords:
@@ -103,9 +113,9 @@ entries:
   jaeger:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-30T17:56:52.009440562Z"
+    created: "2021-03-31T11:39:25.727802015Z"
     description: A Helm chart for installing Jaeger
-    digest: 84b7f5dc8d62e0dc4733ad3dfd967d534527ae13ce87f37a07b0c6e93fb1b4eb
+    digest: 391885c4c3dfcc6104174d233f3a7f7f15d790ee6b5ed1055d229cf4dcfd4519
     name: jaeger
     urls:
     - https://binbashar.github.io/helm-charts/packages/jaeger-0.1.0.tgz
@@ -113,9 +123,9 @@ entries:
   kube-job-cleaner:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-30T17:56:52.009694432Z"
+    created: "2021-03-31T11:39:25.728542018Z"
     description: A Helm chart for installing Kubernetes Job Cleaner (https://github.com/hjacobs/kube-job-cleaner)
-    digest: 12e723a896217be8a61569ffbb480b7cb906738a484f51cddeda23b69f99dd53
+    digest: 2b01904fab8bca8b66c23c91a70efd250e81fc0bda4082ab61d50f6ba1b79f14
     name: kube-job-cleaner
     urls:
     - https://binbashar.github.io/helm-charts/packages/kube-job-cleaner-0.1.0.tgz
@@ -123,10 +133,10 @@ entries:
   linkerd2:
   - apiVersion: v1
     appVersion: stable-2.5.0
-    created: "2021-01-30T17:56:52.010967239Z"
+    created: "2021-03-31T11:39:25.73064458Z"
     description: Linkerd gives you observability, reliability, and security for your
       microservices — with no code change required.
-    digest: c494e90099961cbc8e804a40fe7a5fd82b601bbae7a50156163a6e5d84accf8d
+    digest: bca836d3a9631f746af4bd2dd13f63cb22ce0113a09e417b6bf873ccbed20170
     home: https://linkerd.io
     keywords:
     - service-mesh
@@ -140,9 +150,9 @@ entries:
   onetimesecret:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-30T17:56:52.011370004Z"
+    created: "2021-03-31T11:39:25.731299387Z"
     description: A Helm chart for installing OneTimeSecret (https://github.com/onetimesecret/onetimesecret)
-    digest: 91599e5fe0f0a832905287dff87efff69afc338cba2eabd2fe645155c6f3c8d1
+    digest: 048337d6bc4719c26c4510e1e701d1374db5397a13e2f7fd990b67b5c1a361d2
     name: onetimesecret
     urls:
     - https://binbashar.github.io/helm-charts/packages/onetimesecret-0.1.1.tgz
@@ -150,9 +160,9 @@ entries:
   opencensus:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-30T17:56:52.011641753Z"
+    created: "2021-03-31T11:39:25.731772968Z"
     description: A Helm chart for installing OpenCensus Collector
-    digest: b77dd6836e0f4a010456d64b8012be0af96d36b40091136d144162be08114cf0
+    digest: d11917dd4b7d7554c869623fce48e20a62c7d7c6d1dc1ec26fc93217d93d001b
     name: opencensus
     urls:
     - https://binbashar.github.io/helm-charts/packages/opencensus-0.1.0.tgz
@@ -160,10 +170,10 @@ entries:
   weave-scope:
   - apiVersion: v1
     appVersion: 1.12.0
-    created: "2021-01-30T17:56:52.012752372Z"
+    created: "2021-03-31T11:39:25.733647578Z"
     deprecated: true
     description: DEPRECATED - A Helm chart for the Weave Scope cluster visualizer.
-    digest: 1015e4cd486a52be358e859af9ee2bfa2d6cf13695a52b1528cd094685d46661
+    digest: 58b75b3fa47871b58741f2fc91788cf1493088544b7a397049460cc09b62c3ef
     home: https://www.weave.works/oss/scope/
     icon: https://avatars1.githubusercontent.com/u/9976052?s=64
     keywords:
@@ -176,4 +186,4 @@ entries:
     urls:
     - https://binbashar.github.io/helm-charts/packages/weave-scope-1.1.12.tgz
     version: 1.1.12
-generated: "2021-01-30T17:56:51.99355214Z"
+generated: "2021-03-31T11:39:25.712847729Z"
