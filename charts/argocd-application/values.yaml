@@ -1,0 +1,35 @@
+
+project: default
+
+source: {}
+  # repoURL: https://github.com/owner/repo.git
+  # targetRevision: HEAD
+  # path: path/to/manifests
+  # helm: {}
+  # kustomize: {}
+  # directory: {}
+
+destination:
+  server: https://kubernetes.default.svc
+  namespace: default
+
+syncPolicy:
+  # automated:
+  #     prune: true
+  #     selfHeal: true
+  #     allowEmpty: false
+  syncOptions:
+    - Validate=true
+    - CreateNamespace=true
+  # retry:
+  #   limit: 5
+  #   backoff:
+  #     duration: 5s
+  #     factor: 2
+  #     maxDuration: 3m
+
+# ignoreDifferences:
+#   - group: apps
+#     kind: Deployment
+#     jsonPointers:
+#     - /spec/replicas

@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ include "argocd-application.fullname" . }}
+  labels:
+    app: {{ template "argocd-application.name" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  project: {{ .Values.project }}
+  source:
+    {{- toYaml .Values.source | trim | nindent 4 }}
+  destination:
+    server: {{ .Values.destination.server }}
+    namespace: {{ .Values.destination.namespace }}
+  syncPolicy:
+    {{- toYaml .Values.syncPolicy | trim | nindent 4 }}
