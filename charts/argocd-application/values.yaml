@@ -33,3 +33,6 @@ syncPolicy:
 #     kind: Deployment
 #     jsonPointers:
 #     - /spec/replicas
+
+# finalizers:
+#   - resources-finalizer.argocd.argoproj.io

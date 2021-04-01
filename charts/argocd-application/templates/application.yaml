@@ -7,6 +7,10 @@ metadata:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
+  {{- if .Values.finalizers }}
+  finalizers:
+    {{- toYaml .Values.finalizers | trim | nindent 4 }}
+  {{- end }}
 spec:
   project: {{ .Values.project }}
   source:
