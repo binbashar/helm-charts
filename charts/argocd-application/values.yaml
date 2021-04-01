@@ -34,5 +34,5 @@ syncPolicy:
 #     jsonPointers:
 #     - /spec/replicas
 
-finalizers:
-  - resources-finalizer.argocd.argoproj.io
+# finalizers:
+#   - resources-finalizer.argocd.argoproj.io
