@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ingressmonitorcontroller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ingressmonitorcontroller
+  template:
+    metadata:
+      labels:
+        name: ingressmonitorcontroller
+    spec:
+      serviceAccountName: ingressmonitorcontroller
+      containers:
+        - name: ingressmonitorcontroller
+          image: "{{ .Values.ingressMonitorController.image.name }}:{{ .Values.ingressMonitorController.image.tag }}"
+          command:
+            - IngressMonitorController
+          imagePullPolicy: Always
+          imagePullPolicy: {{ .Values.ingressMonitorController.image.pullPolicy }}
+          env:
+            - name: WATCH_NAMESPACE
+              value: {{ .Values.ingressMonitorController.watchNamespace | quote }}
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "ingressmonitorcontroller"
+            - name: CONFIG_SECRET_NAME
+              value: {{ .Values.ingressMonitorController.configSecretName | quote }}
+            - name: LOG_LEVEL
+              value: {{ .Values.ingressMonitorController.logLevel }}
+            - name: LOG_FORMAT
+              value: {{ .Values.ingressMonitorController.logFormat }}
