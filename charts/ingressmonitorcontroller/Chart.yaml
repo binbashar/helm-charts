@@ -10,19 +10,5 @@ icon: https://raw.githubusercontent.com/stakater/IngressMonitorController/master
 sources:
 - https://github.com/stakater/IngressMonitorController
 maintainers:
-- name: Stakater
-  email: hello@stakater.com
-- name: rasheedamir
-  email: rasheed@aurorasolutions.io
-- name: waseem-h
-  email: waseemhassan@stakater.com
-- name: faizanahmad055
-  email: faizan.ahmad55@outlook.com
-- name: kahootali
-  email: ali.kahoot@aurorasolutions.io
-- name: ahmadiq
-  email: ahmad@aurorasolutions.io
-- name: hazim
-  email: hazim@stakater.com
-- name: lgallard
-  email: lgallard@gmail.com
+- name: Luis Gallardo
+  email: luis.gallardo@binbash.com.ar
