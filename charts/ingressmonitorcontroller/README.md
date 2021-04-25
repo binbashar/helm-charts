@@ -1,36 +1,41 @@
-ingressmonitorcontroller
-========================
+# ingressmonitorcontroller
+
+![Version: v2.0.14](https://img.shields.io/badge/Version-v2.0.14-informational?style=flat-square)
+
 IngressMonitorController chart that runs on kubernetes
 
-Current chart version is `v2.0.14`
+**Homepage:** <https://github.com/stakater/IngressMonitorController>
 
-Source code can be found [here](https://github.com/stakater/IngressMonitorController)
+## Maintainers
 
+| Name | Email | Url |
+| ---- | ------ | --- |
+| Luis Gallardo | luis.gallardo@binbash.com.ar | https://binbash.com.ar |
 
+## Source Code
 
-## Chart Values
+* <https://github.com/stakater/IngressMonitorController>
+
+## Values
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | ingressMonitorController.config.labels.version | string | `"v2.0.14"` |  |
 | ingressMonitorController.configFilePath | string | `"/etc/IngressMonitorController/config.yaml"` |  |
-| ingressMonitorController.data."config.yaml" | string | `"providers:\n- name: UptimeRobot\n  apiKey: your-api-key\n  apiURL: https://google.com\n  alertContacts: some-alert-contacts\nenableMonitorDeletion: true\nmonitorNameTemplate: \"{{.Namespace}}-{{.IngressName}}\"\n# how often (in seconds) monitors should be synced to their Kubernetes resources (0 = disabled)\nresyncPeriod: 0\n# creationDelay is a duration string to add a delay before creating new monitor (e.g., to allow DNS to catch up first)\n# https://golang.org/pkg/time/#ParseDuration\ncreationDelay: 0"` |  |
+| ingressMonitorController.configSecretName | string | `"imc-config"` |  |
+| ingressMonitorController.data."config.yaml" | string | `"providers:\n  - name: UptimeRobot\n    apiKey: 657a68d9ashdyasjdklkskuasd\n    apiURL: https://api.uptimerobot.com/v2/\n    alertContacts: \"0544483_0_0-2628365_0_0-2633263_0_0\"\nenableMonitorDeletion: true"` |  |
 | ingressMonitorController.deployment.annotations."configmap.reloader.stakater.com/reload" | string | `"ingressmonitorcontroller"` |  |
 | ingressMonitorController.deployment.labels.version | string | `"v2.0.14"` |  |
-| ingressMonitorController.existingSecret | string | `""` |  |
 | ingressMonitorController.image.name | string | `"stakater/ingressmonitorcontroller"` |  |
-| ingressMonitorController.image.pullPolicy | string | `"IfNotPresent"` |  |
+| ingressMonitorController.image.pullPolicy | string | `"Always"` |  |
 | ingressMonitorController.image.tag | string | `"v2.0.14"` |  |
 | ingressMonitorController.logFormat | string | `"text"` |  |
 | ingressMonitorController.logLevel | string | `"info"` |  |
 | ingressMonitorController.matchLabels.group | string | `"com.stakater.platform"` |  |
 | ingressMonitorController.matchLabels.provider | string | `"stakater"` |  |
-| ingressMonitorController.mount | string | `"configMap"` |  |
 | ingressMonitorController.rbac.create | bool | `true` |  |
 | ingressMonitorController.serviceAccount.create | bool | `true` |  |
-| ingressMonitorController.serviceAccount.labels.version | string | `"v2.0.14"` |  |
-| ingressMonitorController.serviceAccount.name | string | `"ingressmonitorcontroller"` |  |
-| ingressMonitorController.tolerations | object | `{}` |  |
 | ingressMonitorController.useFullName | bool | `false` |  |
 | ingressMonitorController.watchNamespace | string | `""` |  |
 | kubernetes.host | string | `"https://kubernetes.default"` |  |
+
