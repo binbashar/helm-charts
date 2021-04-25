@@ -1,82 +1,35 @@
+{{- if and ( .Values.ingressMonitorController.rbac.create ) (.Values.ingressMonitorController.watchNamespace) }}
 apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
+kind: Role
 metadata:
-  creationTimestamp: null
-  name: ingressmonitorcontroller
-  labels:
-    # Add these permissions to the "admin" and "edit" default roles.
-    rbac.authorization.k8s.io/aggregate-to-admin: "true"
-    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+  {{- if .Values.ingressMonitorController.useFullName }}
+  name: {{ template "ingressmonitorcontroller.fullname" . }}-role
+  {{- else }}
+  name: {{ template "ingressmonitorcontroller.name" . }}-role
+  {{- end }}
+  namespace: {{ .Values.ingressMonitorController.watchNamespace | quote }}
 rules:
-- apiGroups:
-  - ""
-  - "extensions"
-  - "route.openshift.io"
-  resources:
-  - ingresses
-  - routes
-  - secrets
-  verbs:
-  - list
-  - get
-  - watch
-- apiGroups:
-  - ""
-  resources:
-  - events
-  - services
-  - configmaps
-  - services/finalizers
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - apps
-  resources:
-  - deployments
-  - daemonsets
-  - replicasets
-  - statefulsets
-  verbs:
-  - "*"
-- apiGroups:
-  - monitoring.coreos.com
-  resources:
-  - servicemonitors
-  verbs:
-  - get
-  - create
-  - list
-- apiGroups:
-  - apps
-  resourceNames:
-  - ingressmonitorcontroller
-  resources:
-  - deployments/finalizers
-  verbs:
-  - update
-- apiGroups:
-  - ""
-  resources:
-  - pods
-  verbs:
-  - get
-  - list
-  - watch
-- apiGroups:
-  - endpointmonitor.stakater.com
-  resources:
-  - '*'
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
+  - apiGroups:
+      - ""
+      - "extensions"
+      - "route.openshift.io"
+    resources:
+      - ingresses
+      - routes
+    verbs:
+      - list
+      - get
+      - update
+      - patch
+      - watch
+      - delete
+  - apiGroups:
+      - ""
+    resources:
+      - services
+      - pods
+    verbs:
+      - list
+      - get
+      - watch
+{{- end }}

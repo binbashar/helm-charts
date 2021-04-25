@@ -2,20 +2,20 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-{{- if .Values.ingressMonitorController.useFullName }}
+  {{- if .Values.ingressMonitorController.useFullName }}
   name: {{ template "ingressmonitorcontroller.fullname" . }}-role-binding
-{{- else }}
+  {{- else }}
   name: {{ template "ingressmonitorcontroller.name" . }}-role-binding
-{{- end }}
+  {{- end }}
   namespace: {{ .Values.ingressMonitorController.watchNamespace | quote }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-{{- if .Values.ingressMonitorController.useFullName }}
+  {{- if .Values.ingressMonitorController.useFullName }}
   name: {{ template "ingressmonitorcontroller.fullname" . }}-role
-{{- else }}
+  {{- else }}
   name: {{ template "ingressmonitorcontroller.name" . }}-role
-{{- end }}
+  {{- end }}
 subjects:
   - kind: ServiceAccount
     name: {{ template "ingressmonitorcontroller.serviceAccountName" . }}

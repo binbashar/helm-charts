@@ -1,18 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ingressmonitorcontroller
+{{- if .Values.ingressMonitorController.useFullName }}
+  name: {{ template "ingressmonitorcontroller.fullname" . }}
+{{- else }}
+  name: {{ template "ingressmonitorcontroller.name" . }}
+{{- end }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: ingressmonitorcontroller
+      app: {{ template "ingressmonitorcontroller.name" . }}
+      release: {{ .Release.Name | quote }}
   template:
     metadata:
       labels:
-        name: ingressmonitorcontroller
+        app: {{ template "ingressmonitorcontroller.name" . }}
+        release: {{ .Release.Name | quote }}
     spec:
-      serviceAccountName: ingressmonitorcontroller
+      {{- if .Values.ingressMonitorController.useFullName }}
+      serviceAccountName: {{ template "ingressmonitorcontroller.fullname" . }}
+      {{- else }}
+      serviceAccountName: {{ template "ingressmonitorcontroller.name" . }}
+      {{- end }}
       containers:
         - name: ingressmonitorcontroller
           image: "{{ .Values.ingressMonitorController.image.name }}:{{ .Values.ingressMonitorController.image.tag }}"
