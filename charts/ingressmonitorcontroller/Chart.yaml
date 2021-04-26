@@ -1,0 +1,15 @@
+apiVersion: v1
+name: ingressmonitorcontroller
+description: IngressMonitorController chart that runs on kubernetes
+version: v2.0.14
+keywords:
+  - IngressMonitorController
+  - kubernetes
+home: https://github.com/stakater/IngressMonitorController
+icon: https://raw.githubusercontent.com/stakater/IngressMonitorController/master/assets/web/IMC-round-100px.png
+sources:
+- https://github.com/stakater/IngressMonitorController
+maintainers:
+- name: Luis Gallardo
+  email: luis.gallardo@binbash.com.ar
+  url: https://binbash.com.ar
