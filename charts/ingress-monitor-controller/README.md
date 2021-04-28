@@ -1,8 +1,8 @@
-# ingressmonitorcontroller
+# ingress-monitor-controller
 
 ![Version: v2.0.14](https://img.shields.io/badge/Version-v2.0.14-informational?style=flat-square)
 
-IngressMonitorController chart that runs on kubernetes
+Ingress Monitor Controller chart that runs on kubernetes
 
 **Homepage:** <https://github.com/stakater/IngressMonitorController>
 
