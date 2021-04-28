@@ -1,0 +1,13 @@
+#
+# EndpointMonitor
+#
+endpoint:
+  name: binbash.com.ar
+  type: url
+  forceHttps: true
+  url: https://binbash.com.ar
+  provider: 
+    name: uptimeRobot
+    interval: 600
+    monitorType: http
+
