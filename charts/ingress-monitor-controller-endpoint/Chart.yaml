@@ -1,0 +1,14 @@
+apiVersion: v1
+name: ingress-monitor-controller-endpoint
+description: A Helm chart to install Ingress Monitor Controller endpoints
+version: 0.1.0
+keywords:
+  - IngressMonitorController
+  - kubernetes
+maintainers:
+- name: Binbash Leverage Team
+  email: leverage@binbash.com.ar
+  url: https://binbash.com.ar
+- name: Luis Gallardo
+  email: luis.gallardo@binbash.com.ar
+  url: https://binbash.com.ar

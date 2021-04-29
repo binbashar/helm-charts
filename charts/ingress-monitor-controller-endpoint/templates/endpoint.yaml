@@ -1,0 +1,34 @@
+apiVersion: endpointmonitor.stakater.com/v1alpha1
+kind: EndpointMonitor
+metadata:
+  name: {{ .Values.endpoint.name  }}
+  labels:
+    app: {{ template "ingress-monitor-controller-endpoint.name" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+{{- if eq .Values.endpoint.type "url"}} 
+  forceHttps: {{ .Values.endpoint.forceHttps }}
+  url: {{ .Values.endpoint.url }}
+{{end}}
+{{- if eq .Values.endpoint.type "route" }}
+  forceHttps: {{ .Values.endpoint.forceHttps }}
+  urlFrom:
+    routeRef:
+      name: { .Values.endpoint.routeName }}
+{{end}}
+{{- if eq .Values.endpoint.type "ingress" }}
+  forceHttps: {{ .Values.endpoint.forceHttps }}
+  urlFrom:
+    ingressRef:
+      name: { .Values.endpoint.ingresseName }}
+{{end}}
+{{- if .Values.endpoint.provider }}
+{{- if eq .Values.endpoint.provider.name "uptimeRobot" }}
+  providers: "uptimeRobot"
+  uptimeRobotConfig:
+    interval: {{ .Values.endpoint.provider.interval }}
+    monitorType: {{  .Values.endpoint.provider.monitorType }}
+{{end}}
+{{end}}
