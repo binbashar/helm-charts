@@ -8,8 +8,8 @@ A Helm chart to install Ingress Monitor Controller endpoints
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| Binbash Leverage Team | leverage@binbash.com.ar | https://binbash.com.ar |
-| Luis Gallardo | luis.gallardo@binbash.com.ar | https://binbash.com.ar |
+| Binbash Leverage Team | leverage@binbash.com.ar | https://leverage.binbash.com.ar |
+| Luis Gallardo | luis.gallardo@binbash.com.ar | https://leverage.binbash.com.ar |
 
 ## Values
 
