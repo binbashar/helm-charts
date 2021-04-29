@@ -8,6 +8,7 @@ A Helm chart to install Ingress Monitor Controller endpoints
 
 | Name | Email | Url |
 | ---- | ------ | --- |
+| Binbash Leverage Team | leverage@binbash.com.ar | https://binbash.com.ar |
 | Luis Gallardo | luis.gallardo@binbash.com.ar | https://binbash.com.ar |
 
 ## Values
@@ -15,10 +16,10 @@ A Helm chart to install Ingress Monitor Controller endpoints
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | endpoint.forceHttps | bool | `true` |  |
-| endpoint.name | string | `"binbash.com.ar"` |  |
+| endpoint.name | string | `"example.com"` |  |
 | endpoint.provider.interval | int | `600` |  |
 | endpoint.provider.monitorType | string | `"http"` |  |
 | endpoint.provider.name | string | `"uptimeRobot"` |  |
 | endpoint.type | string | `"url"` |  |
-| endpoint.url | string | `"https://binbash.com.ar"` |  |
+| endpoint.url | string | `"https://example.com"` |  |
 

@@ -2,10 +2,10 @@
 # EndpointMonitor
 #
 endpoint:
-  name: binbash.com.ar
+  name: example.com
   type: url
   forceHttps: true
-  url: https://binbash.com.ar
+  url: https://example.com
   provider: 
     name: uptimeRobot
     interval: 600
