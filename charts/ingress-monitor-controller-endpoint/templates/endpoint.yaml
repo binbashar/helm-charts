@@ -2,6 +2,7 @@ apiVersion: endpointmonitor.stakater.com/v1alpha1
 kind: EndpointMonitor
 metadata:
   name: {{ .Values.endpoint.name  }}
+  namespace: {{ .Values.endpoint.namespace  }}
   labels:
     app: {{ template "ingress-monitor-controller-endpoint.name" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -16,13 +17,13 @@ spec:
   forceHttps: {{ .Values.endpoint.forceHttps }}
   urlFrom:
     routeRef:
-      name: { .Values.endpoint.routeName }}
+      name: {{ .Values.endpoint.routeName }}
 {{end}}
 {{- if eq .Values.endpoint.type "ingress" }}
   forceHttps: {{ .Values.endpoint.forceHttps }}
   urlFrom:
     ingressRef:
-      name: { .Values.endpoint.ingresseName }}
+      name: {{ .Values.endpoint.ingressName }}
 {{end}}
 {{- if .Values.endpoint.provider }}
 {{- if eq .Values.endpoint.provider.name "uptimeRobot" }}
