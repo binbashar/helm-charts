@@ -104,7 +104,7 @@ jobs:
   #
   release-versions:
     machine:
-      image: ubuntu-1604:202007-01
+      image: ubuntu-2004:202201-02
       docker_layer_caching: false
 
     environment:
