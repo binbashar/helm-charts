@@ -13,9 +13,9 @@ config:
   # Whether to enable debug or not
   PLUGIN_DEBUG: "false"
   # A Personal Github Token
-  GITHUB_TOKEN: "YOUR_GITHUB_TOKEN_HERE"
-  # Shared secret with drone
-  PLUGIN_SECRET: "YOUR_PLUGIN_SECRET_HERE"
+  GITHUB_TOKEN: ""
+  # The secret used to talk with drone
+  PLUGIN_SECRET: ""
 
 imagePullSecrets: []
 nameOverride: "drone-tree-config"
