@@ -3,16 +3,16 @@ entries:
   argocd-application:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.311828914Z"
+    created: "2023-05-04T14:44:39.996828735Z"
     description: A Helm chart to create an ArgoCD Application
-    digest: 5f365b946dfe88ea18e161f9a9a1c28903df0add2d25f02fee7a5bc1450b6359
+    digest: e642c2ac5bea3b9153e1dd376d225f94d011f3c541b7f71df74f1d0e8defaae8
     name: argocd-application
     urls:
     - https://binbashar.github.io/helm-charts/packages/argocd-application-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.311643281Z"
+    created: "2023-05-04T14:44:39.993800877Z"
     description: A Helm chart to create an ArgoCD Application
     digest: c873457ff4bf747d34121bba3650b98539c475fbe27bf3482c9fb73d1aa2f388
     name: argocd-application
@@ -22,10 +22,10 @@ entries:
   aws-iam-authenticator-config:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.312030143Z"
+    created: "2023-05-04T14:44:40.000102671Z"
     description: A Helm chart for defining AWS IAM Authenticator mapping configuration
       (https://github.com/kubernetes-sigs/aws-iam-authenticator#full-configuration-format)
-    digest: 4db3dd1a5e6c55ae7a9b45b82a36dd37c4649df8894378704f8ba87ec73b972b
+    digest: d06cd4839f2239e41bf5738cf1d149ec4ca3c8a959f19ab3404cffe69680055a
     name: aws-iam-authenticator-config
     urls:
     - https://binbashar.github.io/helm-charts/packages/aws-iam-authenticator-config-0.1.0.tgz
@@ -33,16 +33,16 @@ entries:
   cert-manager-clusterissuer:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.313164202Z"
+    created: "2023-05-04T14:44:40.009899393Z"
     description: A Helm chart to create a cert-manager clusterissuer
-    digest: bcc90a3023983b727e23e0188b1d06ba9347fd7f54bfecdd6ee10a2b5d09310c
+    digest: 1056f626f02a422217255a0e959af64bb38d3cae02519af3fe17b0c65079d08a
     name: cert-manager-clusterissuer
     urls:
     - https://binbashar.github.io/helm-charts/packages/cert-manager-clusterissuer-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.312384327Z"
+    created: "2023-05-04T14:44:40.00668644Z"
     description: A Helm chart to create a cert-manager clusterissuer
     digest: a9c3cb210d148042b32faa9fe38bdf24819f4a1514a4a34946cd5681ff16e2a1
     name: cert-manager-clusterissuer
@@ -51,7 +51,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.312198151Z"
+    created: "2023-05-04T14:44:40.003162237Z"
     description: A Helm chart to create a cert-manager clusterissuer
     digest: 2806cdb93d4a57322486d4b286f5e320f3179699172145aac42e02b9b0da5b4e
     name: cert-manager-clusterissuer
@@ -61,9 +61,9 @@ entries:
   cert-manager-crds:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.316440852Z"
+    created: "2023-05-04T14:44:40.01546874Z"
     description: A Helm chart to install cert-manager CRDs
-    digest: 21fbca41e14006f54f64d7aac41ceafb7ea010f0a5cf3ad841cb336bdc68c0e7
+    digest: 47aa367007d5881cd2e29373a2092e3613298afbf7ad5415cedf4d3f4f0ba700
     name: cert-manager-crds
     urls:
     - https://binbashar.github.io/helm-charts/packages/cert-manager-crds-0.1.0.tgz
@@ -71,9 +71,9 @@ entries:
   cert-manager-issuer:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.316632407Z"
+    created: "2023-05-04T14:44:40.01837728Z"
     description: A Helm chart to create a cert-manager issuer
-    digest: cd79df1ba992f2e55f1abf870df79fe6adf9af3013d6431454b5f396fd08ddbf
+    digest: 574b75508291af3601ae54a346805de44ef19212357df56ebafbdb1dc2e3be4b
     name: cert-manager-issuer
     urls:
     - https://binbashar.github.io/helm-charts/packages/cert-manager-issuer-0.1.0.tgz
@@ -81,9 +81,9 @@ entries:
   drone-tree-config:
   - apiVersion: v1
     appVersion: 0.4.2
-    created: "2022-10-04T14:15:27.316857552Z"
+    created: "2023-05-04T14:44:40.021653381Z"
     description: A Helm chart for Kubernetes
-    digest: 8a85a99dfaf5ee351bc2ec5353cf3726438f0499139109e5b2683608f01e0940
+    digest: c05f956c0da92e76d6f2307dd8f8f656f4246699191a2d105a83b711bd16c6f4
     name: drone-tree-config
     urls:
     - https://binbashar.github.io/helm-charts/packages/drone-tree-config-0.1.0.tgz
@@ -91,18 +91,18 @@ entries:
   fluentd-daemonset:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.317128253Z"
+    created: "2023-05-04T14:44:40.024938959Z"
     description: A Helm chart for installing FluentD DaemonSet
-    digest: 45534eec31823fe01bfaaff49185dea9eaca1f48a296c0259895e1f250cd8596
+    digest: dc8358f660e15cadaf786cab11d9eaa7540ae77e7818f18dff9f631832761ddb
     name: fluentd-daemonset
     urls:
     - https://binbashar.github.io/helm-charts/packages/fluentd-daemonset-0.1.0.tgz
     version: 0.1.0
   ingress-monitor-controller:
   - apiVersion: v1
-    created: "2022-10-04T14:15:27.317973706Z"
+    created: "2023-05-04T14:44:40.034442209Z"
     description: Ingress Monitor Controller chart that runs on kubernetes
-    digest: 873b8c785fcda0491073754360b975a031d38827f65c9f580b56273fbc0b3cd6
+    digest: 3aebaeebedfc421d84997e1aba0b4c4ea77c986941a859670ecf9585d47fa21b
     home: https://github.com/stakater/IngressMonitorController
     icon: https://raw.githubusercontent.com/stakater/IngressMonitorController/master/assets/web/IMC-round-100px.png
     keywords:
@@ -123,9 +123,9 @@ entries:
     version: v2.0.14
   ingress-monitor-controller-endpoint:
   - apiVersion: v1
-    created: "2022-10-04T14:15:27.317586533Z"
+    created: "2023-05-04T14:44:40.031071388Z"
     description: A Helm chart to install Ingress Monitor Controller endpoints
-    digest: 7322824470175df4a3d45b918218e7ba56b6b01a8546e6396f1d9199b20c44f6
+    digest: 56532159fa2c4d326dec9db5255346f566cfa15cc22b838f1e1c6a9930550ce0
     keywords:
     - IngressMonitorController
     - kubernetes
@@ -141,7 +141,7 @@ entries:
     - https://binbashar.github.io/helm-charts/packages/ingress-monitor-controller-endpoint-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: "2022-10-04T14:15:27.317364494Z"
+    created: "2023-05-04T14:44:40.028259246Z"
     description: A Helm chart to install Ingress Monitor Controller endpoints
     digest: 246bf04bf35a7630e7d6796612d76d2fdb2b92c43965e95a5df9cf873f5b068f
     keywords:
@@ -160,7 +160,7 @@ entries:
     version: 0.1.0
   ingressmonitorcontroller:
   - apiVersion: v1
-    created: "2022-10-04T14:15:27.318338255Z"
+    created: "2023-05-04T14:44:40.03838091Z"
     description: IngressMonitorController chart that runs on kubernetes
     digest: c67ba20dcf8e82aad53f8af8a81eaeec20ebe0fc9bee68dd4c9ef7492f28b3d0
     home: https://github.com/stakater/IngressMonitorController
@@ -181,9 +181,9 @@ entries:
   istio:
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2022-10-04T14:15:27.325644695Z"
+    created: "2023-05-04T14:44:40.047453071Z"
     description: Helm chart for all istio components
-    digest: 462b117c52969ed70c6ff47bdd63f1e54b9b35b6982630a05a8cda852ef61adc
+    digest: 9549105235267cd54f317378dc044c15f9de10fdeab2c8892d2e4c69df610b88
     engine: gotpl
     icon: https://istio.io/favicons/android-192x192.png
     keywords:
@@ -203,9 +203,9 @@ entries:
   istio-init:
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2022-10-04T14:15:27.32680456Z"
+    created: "2023-05-04T14:44:40.050941282Z"
     description: Helm chart to initialize Istio CRDs
-    digest: c15ec32bd1ce1dc7eb3d2206435e4a223e657b2bd9615768ca2ba77ef3774ff0
+    digest: ea5b0d24652ed6e74dea453b8b005cc42c003eb6db65ae4225ba4ff3b0833e20
     engine: gotpl
     icon: https://istio.io/favicons/android-192x192.png
     keywords:
@@ -221,19 +221,30 @@ entries:
   jaeger:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.327314814Z"
+    created: "2023-05-04T14:44:40.053938273Z"
     description: A Helm chart for installing Jaeger
-    digest: 3001b52747f7e2f6b8bfb6cbde7724021e6f50339118c763089a5f918d04c0e3
+    digest: 2ba19d49af026e7d9b01ca5abf6b8462d7f4d6cfe0f67d7178e20e63b849954c
     name: jaeger
     urls:
     - https://binbashar.github.io/helm-charts/packages/jaeger-0.1.0.tgz
     version: 0.1.0
+  k8s-image-availability-exporter:
+  - apiVersion: v1
+    appVersion: v0.5.1
+    created: "2023-05-04T14:44:40.056992705Z"
+    description: Application for monitoring the cluster workloads image presence in
+      docker registry.
+    digest: bcd773ba2c4a8d1d50bdafecdfb22c43c8f933a4d3ec0608aecfdeaff4883459
+    name: k8s-image-availability-exporter
+    urls:
+    - https://binbashar.github.io/helm-charts/packages/k8s-image-availability-exporter-0.5.1.tgz
+    version: 0.5.1
   kube-job-cleaner:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.327564947Z"
+    created: "2023-05-04T14:44:40.060034847Z"
     description: A Helm chart for installing Kubernetes Job Cleaner (https://github.com/hjacobs/kube-job-cleaner)
-    digest: 829d00459296f477c46cc721ec9da0950985fe69b3ed5c921d007fbb8118ae81
+    digest: e98209580d866e6f5c4249d47fe1489cff20c09f26b66aa16629e1bb316287c2
     name: kube-job-cleaner
     urls:
     - https://binbashar.github.io/helm-charts/packages/kube-job-cleaner-0.1.0.tgz
@@ -241,10 +252,10 @@ entries:
   linkerd2:
   - apiVersion: v1
     appVersion: stable-2.5.0
-    created: "2022-10-04T14:15:27.328460554Z"
+    created: "2023-05-04T14:44:40.063700255Z"
     description: Linkerd gives you observability, reliability, and security for your
       microservices — with no code change required.
-    digest: 6c608648e92c882cf2f6c0980d1a0081eea86523f460a20e9fb163fbaaae76cb
+    digest: 305ff8f2dac044f56c4905172ded6c2ecf0010f8103da35da5309873a55ae266
     home: https://linkerd.io
     keywords:
     - service-mesh
@@ -258,9 +269,9 @@ entries:
   onetimesecret:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.32873346Z"
+    created: "2023-05-04T14:44:40.067019556Z"
     description: A Helm chart for installing OneTimeSecret (https://github.com/onetimesecret/onetimesecret)
-    digest: 23b31fc607e3cb4d7571a5fb9f18fd994ad432af7e6728bc72f8855a72a943a3
+    digest: bbda9b06ab033d88184d443cc546528eaac877c99bbe717ef8f36cbe4b6826f1
     name: onetimesecret
     urls:
     - https://binbashar.github.io/helm-charts/packages/onetimesecret-0.1.1.tgz
@@ -268,31 +279,41 @@ entries:
   opencensus:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:15:27.328920234Z"
+    created: "2023-05-04T14:44:40.069860598Z"
     description: A Helm chart for installing OpenCensus Collector
-    digest: 6805d6bc71cad5cf5fc92801747e663bdeb0ac79728fd8c9c783fd287d819b62
+    digest: 9436e09282d93d01eb2793203ff1e95cc450bfc73854231b2d4ffc42b25abbf4
     name: opencensus
     urls:
     - https://binbashar.github.io/helm-charts/packages/opencensus-0.1.0.tgz
     version: 0.1.0
   raw:
   - apiVersion: v1
-    created: "2022-10-04T14:15:27.329147223Z"
+    created: "2023-05-04T14:44:40.072853013Z"
     description: A place for all the Kubernetes resources which don't already have
       a home
-    digest: 60a32052294a912ca0ab77a10dc80a12956af461a5603b03a529449edf6a348e
+    digest: b34da287a3aa49f8836b5407bc6eb64e4673bd83c2bfdd0df4084f2e3fa40b68
     kubeVersion: '>=1.16.0-0'
     name: raw
     urls:
     - https://binbashar.github.io/helm-charts/packages/raw-v0.1.0.tgz
     version: v0.1.0
+  sample:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-05-04T14:44:40.075706537Z"
+    description: A sample Helm chart
+    digest: 5d990e860e892c7e22f943afb83e656b6fc5382d2fef646d2fb235dbc869cafb
+    name: sample
+    urls:
+    - https://binbashar.github.io/helm-charts/packages/sample-0.1.0.tgz
+    version: 0.1.0
   weave-scope:
   - apiVersion: v1
     appVersion: 1.12.0
-    created: "2022-10-04T14:15:27.329861587Z"
+    created: "2023-05-04T14:44:40.079196Z"
     deprecated: true
     description: DEPRECATED - A Helm chart for the Weave Scope cluster visualizer.
-    digest: 8e3851b3e80b39a083a24b7277d150e0068343cae725449a813b1bda609db038
+    digest: aebe4aed966f4ceb446b6f581d25637f2b2d2ab1711a34d1f24861c2b04956e1
     home: https://www.weave.works/oss/scope/
     icon: https://avatars1.githubusercontent.com/u/9976052?s=64
     keywords:
@@ -305,4 +326,4 @@ entries:
     urls:
     - https://binbashar.github.io/helm-charts/packages/weave-scope-1.1.12.tgz
     version: 1.1.12
-generated: "2022-10-04T14:15:27.311279716Z"
+generated: "2023-05-04T14:44:39.990561752Z"
