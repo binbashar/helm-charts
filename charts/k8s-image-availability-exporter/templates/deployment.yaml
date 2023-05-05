@@ -18,6 +18,10 @@ spec:
     metadata:
       labels:
         app: {{ template "k8s-image-availability-exporter.fullname" . }}
+{{- if .Values.k8sImageAvailabilityExporter.podAnnotations }}
+      annotations:
+{{ toYaml .Values.k8sImageAvailabilityExporter.podAnnotations | indent 8 }}
+{{- end }}
     spec:
       containers:
       - name: k8s-image-availability-exporter
